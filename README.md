@@ -36,7 +36,10 @@
 * 获取Cloudflare域名的dns id
 
 ```
-curl -X GET "https://api.cloudflare.com/client/v4/zones/这里填入zoneID/dns_records" -H "X-Auth-Email: 这里填入CF的用户名" -H "X-Auth-Key: 这里填入CF的全局token" -H "Content-Type: application/json" | python -mjson.tool
+curl -X GET "https://api.cloudflare.com/client/v4/zones/域名ID/dns_records?page=1&per_page=20&order=type&direction=asc" \
+-H "X-Auth-Email: 账号邮箱" \
+-H "Authorization: Bearer 前面获取的 API 令牌" \
+-H "Content-Type: application/json"
 ```
 
 
