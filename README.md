@@ -37,7 +37,6 @@
 
 ```
 curl -X GET "https://api.cloudflare.com/client/v4/zones/域名ID/dns_records?page=1&per_page=20&order=type&direction=asc" \
--H "X-Auth-Email: 账号邮箱" \
 -H "Authorization: Bearer 前面获取的 API 令牌" \
 -H "Content-Type: application/json"
 ```
